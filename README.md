@@ -153,7 +153,7 @@ Books
 
 Members
 1. POST `/memebers`: Add a new member with valid data.
-2. GET `/members`: Get all members, fetching all members
+2. GET `/members`: Get all members
 3. GET `/members/{member_id}`: Get a single member by its ID.
 4. PUT `/members/{member_id}`: Update an existing member.
 5. DELETE `/members/{member_id}`: Delete a member.
