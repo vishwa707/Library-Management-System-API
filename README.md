@@ -89,10 +89,11 @@ Books
            "author": "Author Name",
            "isbn": "123456789",
            "year": 2023
-         }
+          }
+          ```
    - GET /books: Get all books with optional search and pagination.
-   - Query params: **search** (string), **page** (int), **per_page** (int).
-   - Example request: **GET /books?search=Harry&page=1&per_page=5**
+   - Query params: `search` (string), `page`(int), `per_page` (int).
+   - Example request: `GET /books?search=Harry&page=1&per_page=5`
    - GET /books/{book_id}: Get details of a specific book by its ID.
    - PUT /books/{book_id}: Update a specific book by its ID.
    - Request body: JSON object with updated book details.
@@ -100,7 +101,7 @@ Books
 
 Members
    - POST /members: Add a new member.
-   - Request body: JSON object with member details (**name**, **email**).
+   - Request body: JSON object with member details (`name`, `email`).
    - GET /members: Get all members.
    - GET /members/{member_id}: Get details of a specific member by their ID.
    - PUT /members/{member_id}: Update a specific member by their ID.
