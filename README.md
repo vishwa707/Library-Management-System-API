@@ -34,4 +34,75 @@ This project implements a **Library Management System** API using Flask. The API
 Clone the repository to your local machine:
 
 ```bash
-git clone <https://github.com/vishwa707/Library-Management-System-API>
+git clone https://github.com/vishwa707/Library-Management-System-API
+```
+
+### 2. Install Dependencies
+This project uses Flask. To install Flask and any required dependencies, follow these steps:
+
+1. Create a virtual environment (optional but recommended):
+
+    ```bash
+    python -m venv venv
+    ```
+
+2. Activate the virtual environment:
+
+    - On Windows:
+      ```bash
+      .\venv\Scripts\activate
+      ```
+
+    - On MacOS/Linux:
+      ```bash
+      source venv/bin/activate
+      ```
+
+3. Install Flask using pip:
+
+    ```bash
+    pip install flask
+    ```
+### 3. Running the Application
+To start the application, use the following command:
+
+```bash
+python LMS.py
+```
+The Flask app will start running on http://127.0.0.1:5000/ by default.
+
+### 4. API Authentication
+To interact with the API, you need to include a valid token in the request headers:
+```bash
+Authorization: alpha beta gamma
+```
+You can make API requests using tools like Postman or crul
+
+### API Endpoints
+Books
+   - POST /books: Add a new book.
+       - Request body: JSON object with book details (title, author, isbn, year).
+        - Example:
+          ```bash
+          {
+           "title": "Book Title",
+           "author": "Author Name",
+           "isbn": "123456789",
+           "year": 2023
+         }
+   - GET /books: Get all books with optional search and pagination.
+   - Query params: **search** (string), **page** (int), **per_page** (int).
+   - Example request: **GET /books?search=Harry&page=1&per_page=5**
+   - GET /books/{book_id}: Get details of a specific book by its ID.
+   - PUT /books/{book_id}: Update a specific book by its ID.
+   - Request body: JSON object with updated book details.
+   - DELETE /books/{book_id}: Delete a book by its ID.
+
+Members
+   - POST /members: Add a new member.
+   - Request body: JSON object with member details (**name**, **email**).
+   - GET /members: Get all members.
+   - GET /members/{member_id}: Get details of a specific member by their ID.
+   - PUT /members/{member_id}: Update a specific member by their ID.
+   - Request body: JSON object with updated member details.
+   - DELETE /members/{member_id}: Delete a member by their ID.
