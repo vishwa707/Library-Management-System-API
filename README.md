@@ -145,7 +145,7 @@ For testing the functionality of the API, you can use Postman or curl to send re
 
 **Example tests:**
 Books
-1. POST /books: Add a new book with valid data.
+1. POST `/books`: Add a new book with valid data.
 2. GET `/books`: Get all books, testing both search and pagination.
 3. GET `/books/{book_id}`: Get a single book by its ID.
 4. PUT `/books/{book_id}`: Update an existing book.
